@@ -383,7 +383,7 @@ export default function EnglishLearningApp() {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-red-600 via-white to-blue-600 rounded-full mb-6 shadow-2xl border-4 border-white">
-                        <img src="../public/US_flag.svg" className="w-15" alt="" />
+                        <img src="/US_flag.svg" className="w-15" alt="" />
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-blue-800 to-red-600 mb-4 font-serif tracking-wider">
                         AMERICAN ENGLISH
