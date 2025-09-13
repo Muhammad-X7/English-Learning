@@ -392,7 +392,7 @@ export default function EnglishLearningApp() {
                         PRONUNCIATION TRAINER
                     </h2>
                     <p className="text-md md:text-xl text-gray-700 font-medium">
-                        Master American English with confidence and clarity!
+                        Your personal English reading assistant, text to speech made easy.
                     </p>
                 </div>
 
