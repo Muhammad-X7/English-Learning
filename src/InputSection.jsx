@@ -22,7 +22,7 @@ function InputSection({ addPhrase }) {
                 />
                 <button
                     onClick={handleAdd}
-                    className="px-2  md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white cursor-pointer text-xs md:text-lg rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-3 uppercase tracking-wide border-2 border-white/20"
+                    className="px-1.5 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white cursor-pointer text-[10px] md:text-lg rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-3 uppercase tracking-wide border-2 border-white/20"
                 >
                     ADD PHRASE
                 </button>
