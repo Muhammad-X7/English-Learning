@@ -26,7 +26,7 @@ function PhraseCard({
 
             <div className="flex flex-col-reverse sm:flex-row items-center sm:items-start justify-between gap-4">
                 <div className="flex-1">
-                    <p className="text-gray-800 text-lg lg:text-xl font-bold leading-relaxed mb-3 font-serif">
+                    <p className="text-gray-800 text-lg lg:text-xl font-bold leading-relaxed mb-3 font-serif break-words">
                         "{text}"
                     </p>
 
