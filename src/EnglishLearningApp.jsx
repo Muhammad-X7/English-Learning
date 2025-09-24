@@ -218,12 +218,6 @@ export default function EnglishLearningApp() {
         }
     }, [playAllQueue, speak]);
 
-    // Check if phrases become empty, and show empty modal if so.
-    // useEffect(() => {
-    //     if (phrases.length === 0) {
-    //         setIsEmptyModalOpen(true);
-    //     }
-    // }, [phrases]);
 
     const playAll = () => {
         if (!phrases.length) {
@@ -309,7 +303,7 @@ export default function EnglishLearningApp() {
     // New function to handle the "Clear Data" button logic
     const handleClearData = () => {
         if (phrases.length === 0) {
-            // لو فاضي أصلاً ممكن بس نوري رسالة Status بدون مودال
+            // If it's empty anyway, we can just show a Status message without a modal
             showStatus("⚠️ No phrases to clear");
         } else {
             setIsConfirmOpen(true);
@@ -333,7 +327,7 @@ export default function EnglishLearningApp() {
         }, 250);
     };
 
-    // مسح البيانات فعلياً
+    // Actually delete the data
     const clearPhrasesData = () => {
         window.speechSynthesis.cancel();
         clearInterval(timerRef.current);
@@ -347,7 +341,7 @@ export default function EnglishLearningApp() {
         setTimeLeft(0);
         localStorage.removeItem(STORAGE_KEY);
 
-        // نفتح مودال "No Phrases!" فقط بعد المسح
+        // Open the "No Phrases!" modal only after deletion        
         setIsEmptyModalOpen(true);
 
         showStatus(
@@ -453,13 +447,13 @@ export default function EnglishLearningApp() {
                                 />
 
                                 <div className="flex justify-between text-sm font-bold text-gray-600 mt-2 uppercase">
-                                    {/* SLOW مع أيقونة */}
+                                    {/* SLOW with icon */}
                                     <div className="flex items-center gap-2">
                                         <img src="/turtle_8589459.png" className="w-6 h-6" alt="turtle icon" />
                                         <span>Slow</span>
                                     </div>
 
-                                    {/* FAST مع أيقونة */}
+                                    {/* FAST with icon */}
                                     <div className="flex items-center gap-2">
                                         <img src="/rocket.png" className="w-6 h-6" alt="rocket icon" />
                                         <span>Fast</span>
@@ -523,7 +517,6 @@ export default function EnglishLearningApp() {
                         )}
                     </div>
                 </div>
-
                 <StatusIndicator message={status} />
             </div>
 

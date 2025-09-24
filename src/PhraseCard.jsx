@@ -1,7 +1,4 @@
-
-// Phrase Card Component
 function PhraseCard({
-    // id,
     text,
     isActive,
     isPaused,
@@ -21,13 +18,15 @@ function PhraseCard({
                 }`}
         >
             {isActive && (
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 via-white to-blue-500"
-                    style={{ width: `${progress}%`, transition: 'width 0.3s ease' }} />
+                <div
+                    className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 via-white to-blue-500"
+                    style={{ width: `${progress}%`, transition: 'width 0.3s ease' }}
+                />
             )}
 
-            <div className="flex items-start justify-between gap-6">
+            <div className="flex flex-col-reverse sm:flex-row items-center sm:items-start justify-between gap-4">
                 <div className="flex-1">
-                    <p className="text-gray-800 text-[7px] md:text-lg lg:text-xl font-bold leading-relaxed mb-3 font-serif">
+                    <p className="text-gray-800 text-lg lg:text-xl font-bold leading-relaxed mb-3 font-serif">
                         "{text}"
                     </p>
 
@@ -53,7 +52,7 @@ function PhraseCard({
                     )}
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex gap-2 mb-4 sm:mb-0">
                     <button
                         onClick={onSpeak}
                         className={`p-3 rounded-lg text-white transition-all duration-300 transform hover:scale-110 shadow-lg uppercase text-xs font-bold ${isActive && !isPaused
@@ -64,12 +63,11 @@ function PhraseCard({
                         title="SPEAK"
                     >
                         <img src="speaker_icon.png" className="w-6" alt="" />
-
                     </button>
 
                     <button
                         onClick={onPause}
-                        className={`p-3 rounded-lg text-white transition-all duration-300  transform hover:scale-110 shadow-lg uppercase text-xs font-bold ${!isActive || isPaused
+                        className={`p-3 rounded-lg text-white transition-all duration-300 transform hover:scale-110 shadow-lg uppercase text-xs font-bold ${!isActive || isPaused
                             ? 'bg-gray-400 cursor-not-allowed shadow-none transform-none'
                             : 'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 hover:shadow-xl cursor-pointer border-2 border-white/20'
                             }`}
